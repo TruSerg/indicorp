@@ -1,0 +1,33 @@
+form(action="#")
+    label(for="name") Ваше имя
+    input(id="name" type="text" placeholder="Введите имя" value="Елена")
+    br
+    br
+    label
+        span Ваше email
+        input(type="email" placeholder="Введите email" value="test@mail.com")
+    br
+    br
+    div Ваш пол
+    label.radio-item
+        input.radio-item__field(type="radio" name="gender" value="w" checked)
+        span.radio-item__title женский   
+    label.radio-item     
+        input.radio-item__field(type="radio" name="gender" value="m") 
+        span.radio-item__title мужской
+    br
+    br    
+    div Ваша страна
+    //-select.select-item
+        option Россия
+        option Беларусь
+        option Украина
+    .select-item
+        .select-item__title Россия      
+        ul.select-item__body
+            li Россия
+            li Беларусь
+            li Украина      
+    br
+    br    
+    button Отправить    

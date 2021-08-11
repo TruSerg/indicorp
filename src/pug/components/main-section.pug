@@ -1,0 +1,40 @@
+section.main-section 
+    .container
+        h1.main-section__title EMPOWER YOUR BUSINESS
+        p.main-section__description We know how large objects will act, but things on a small scale.
+        .main-section__btns 
+            a(href="#").btn.btn--primary Get Quote Now
+            a(href="#").btn.btn--secondary Learn More
+        .main-section__row
+            mixin main-item(args={}) 
+                .main-section__col
+                    if(args.modification)
+                        .main-item.main-item--background
+                            .main-item__img-wrap
+                                img.main-item__img(src=args.img, alt="")
+                            .main-item__title=args.title 
+                            .main-item__description=args.description
+                    else
+                        .main-item
+                            .main-item__img-wrap
+                                img.main-item__img(src=args.img, alt="")
+                            .main-item__title=args.title 
+                            .main-item__description=args.description 
+            +main-item({
+                img: "./assets/imgs/icon1.svg",
+                title: "Digital Marketing",
+                description: "We focus on ergonomics and meeting you where you work.",
+                modification: false
+            })                
+            +main-item({
+                img: "./assets/imgs/icon2.svg",
+                title: "National top 50 firms",
+                description: "Just type what's on your mind and we'll get you there.",
+                modification: false
+            })
+            +main-item({
+                img: "./assets/imgs/icon3.svg",
+                title: "Digital Marketing",
+                description: "the quick fox jumps over the lazy dog",
+                modification: true
+            })

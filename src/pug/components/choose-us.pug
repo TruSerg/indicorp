@@ -1,0 +1,39 @@
+include ../mixins/_head
+include ../mixins/_icon
+
+mixin choose-item(args={})
+    .choose-item 
+        +icon(args.icon)
+        .choose-item__title=args.title 
+        .choose-item__text=args.text
+
+section.choose-us
+    .container
+        +head({
+            title: 'WHY CHOOSE US',
+            text: 'Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics'
+        }).head--uppercase
+        .choose-us__row
+            +choose-item({
+                icon: 'i-people',
+                title: '3K',
+                text: 'CASES DONE'
+            })  
+            +choose-item({
+                icon: 'i-line',
+                title: '45',
+                text: 'HAPPY CUSTOMERS'
+            })
+            +choose-item({
+                icon: 'i-medal',
+                title: '12+',
+                text: 'AWARD WINNING'
+            })
+            +choose-item({
+                icon: 'i-bag',
+                title: '1.5K',
+                text: 'CASES DONE'
+            })                    
+
+
+        
